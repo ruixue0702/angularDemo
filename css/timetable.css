@@ -1,0 +1,41 @@
+/*timetable.css*/
+.timetable {
+	width: 96%;
+	margin: 0 2% ;
+	padding: 2%;
+}
+.timetable_save {
+	width: 100%;
+	margin:0;
+	padding: 0;
+}
+.timetable caption {
+	font-weight: 700;
+	font-size: 1.8rem;
+	font-family: "微软雅黑";
+}
+.timetable td {
+	text-align: center;
+	color: #666;
+	font-size: 1.2rem;
+	font-family: "微软雅黑";
+	padding: .5rem 0;
+}
+.timetable .th {
+	font-weight: 700;
+	color: #333;
+}
+#th {
+	font-size: 1.6rem;
+}
+#btn_save_timetable {
+	width: 96%;
+	padding: .5rem;
+	text-align: center;
+	font-size: 1.4rem;
+	font-family: "微软雅黑";
+	margin:  .5rem 2%;
+}
+.timetable option {
+	font-size: 1rem;
+}

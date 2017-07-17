@@ -1,0 +1,42 @@
+/* flex 弹性盒子布局 */
+/*body {
+    direction: rtl;
+}*/
+ 
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+/*    width: 400px;
+    height: 250px;
+    background-color: lightgrey;
+    padding: 10px;*/
+}
+.flex-item {
+    /*background-color: cornflowerblue;*/
+    /*height: 100px;*/
+    /*margin: 10px;*/
+}
+#nav,#calculator .flex-container,#news .flex-container {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+
+}
+#nav .flex-item {
+    width: 19%;
+    -webkit-align-self: flex-end;
+    align-self: flex-end;
+}
+#calculator .btn_c,#calculator .btn_p,#calculator .btn_nums {
+    -webkit-align-self: flex-end;
+    align-self: flex-end;
+}
+#form {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
+}
+#news .flex-item {
+    width: 50%;
+}

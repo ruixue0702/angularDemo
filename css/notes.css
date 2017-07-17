@@ -1,0 +1,40 @@
+/*notes.css*/
+#notes,.notes {
+	width: 90%;
+	margin: 0 5%;
+	font-size: 1.4rem;
+}
+#notes .title {
+	width: 100%;
+	padding: .5rem 1rem;
+	margin-bottom: .5rem;
+}
+#notes textarea{
+	width: 100%;
+	padding: .5rem 1rem;
+}
+#notes #subform {
+	width: 100%;
+	padding: .5rem;
+	text-align: center;
+	font-size: 1.4rem;
+	font-family: "微软雅黑";
+	display: block;
+	margin-top: 1rem;
+	margin-left: 0;
+	margin:  .5rem 0;
+}
+.notes input {
+	padding-top: .5rem;
+}
+.notes .formbottom {
+	border-bottom: #dedede .1rem solid;
+	padding-bottom: .5rem;
+}
+.notes p {
+	padding-left: 1rem;
+	margin: 0;
+	height: 2rem;
+	line-height: 2rem;
+	font-size: 1.4rem;
+}

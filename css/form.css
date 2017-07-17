@@ -1,0 +1,55 @@
+/*form.css*/
+
+#form,.form {
+	width: 90%;
+	margin: 0 5%;
+	font-size: 1.4rem;
+}
+#form .form_item {
+	position: relative;
+	margin-top: 1rem;
+}
+#form label {
+	width: 30%;
+	font-weight: 700;
+	font-family: "微软雅黑";
+	position: absolute;
+	z-index: 100;
+	left: 0;
+	top: .8rem;
+}
+#form input ,#form textarea{
+	width: 70%;
+	padding: .5rem 1rem;
+	margin-left: 30%;
+}
+#form #subform {
+	width: 100%;
+	padding: .5rem;
+	text-align: center;
+	font-size: 1.4rem;
+	font-family: "微软雅黑";
+	display: block;
+	margin-top: 1rem;
+	margin-left: 0;
+	margin:  .5rem 0;
+	margin-bottom: 1rem;
+}
+.form input {
+	margin-top: .5rem;
+}
+.form p {
+	/*padding-left: 2rem;*/
+	margin: 0;
+/*	height: 2rem;
+	line-height: 2rem;*/
+	font-size: 1.4rem;
+}
+.form .formbottom {
+	border-bottom: #dedede .1rem solid;
+	padding-bottom: 1rem;
+}
+.form button {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
