@@ -1,0 +1,23 @@
+<div ng-controller="newslistCtrl">
+	<div class="flex-container news" id="news">
+		<!-- <div class="flex-item news_classify" ng-click="newstab">News</div> -->
+		<div class="flex-item news_classify" ng-click="innershow()">News inner</div>
+		<div class="flex-item news_classify" ng-click="outershow()">News outer</div>
+	</div>
+	<div class="">
+		<ul class="newslist" ng-show="innershows">
+			<li ng-repeat="x in newslists">
+				<img src="{{x.imageUrl}}" alt=""/>
+				<h3>{{x.title}}</h3>
+				<p>{{x.abstract}}</p>
+			</li>
+		</ul>
+		<ul class="newslist" ng-show="outershows">
+			<li ng-repeat="x in outernewslists">
+				<img src="{{x.imageUrl}}" alt=""/>
+				<h3>{{x.title}}</h3>
+				<p>{{x.abstract}}</p>
+			</li>
+		</ul>		
+	</div>
+</div>

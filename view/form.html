@@ -1,0 +1,22 @@
+<div ng-controller="formCtrl">
+	<form action="" class="flex-container" id="form" ng-submit="formAdd()">
+		<div class="flex-item form_item">
+			<label for="name">username:</label>
+			<input type="text" ng-model="formUsername"  placeholder="username"/>
+		</div>
+		<div class="flex-item form_item">
+			<label for="">tel:</label>
+			<input type="" ng-model="formTel"  placeholder="tel"/>
+		</div>
+		<div class="flex-item form_item">
+			<label for="">New Message:</label>
+			<textarea ng-model="formCon"  name="" id="" cols="30" rows="10" placeholder="New Message"></textarea>
+			<!-- <input type=""/> -->
+		</div>
+		<input type="submit" value="submit" id="subform" />
+	</form>
+	<div ng-repeat="x in formList" class="form">
+	    <input type="checkbox" ng-model="x.done"> <span ng-bind="x.formUsername"></span><p ng-bind="x.formTel"></p><p ng-bind="x.formCon" class="formbottom"></p>
+	</div>
+	<p class="form"><button ng-click="remove()">删除记录</button></p>
+</div>

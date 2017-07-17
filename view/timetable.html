@@ -1,0 +1,126 @@
+<div ng-controller="timetableCtrl">
+
+	<div class="" ng-show="myshow">
+		<table class="timetable" cellspacing="0">
+			<caption>课程表</caption>
+			<tr class="th" id="th">
+				<td style="background-color:#dedede;padding:0 .3rem;"></td>
+				<td style="background-color:#dedede">Mon</td>
+				<td style="background-color:#dedede">Tue</td>
+				<td style="background-color:#dedede">Wed</td>
+				<td style="background-color:#dedede">Thu</td>
+				<td style="background-color:#dedede">Fri</td>
+				<td style="background-color:#dedede">Sat</td>
+				<td style="background-color:#dedede">Sun</td>
+			</tr>
+			<tr ng-repeat="x in timetables">
+				<td class="th" style="background-color:#dedede;padding:0 .3rem;">{{$index + 1}}</td>
+				<td ng-if="$odd" style="background-color:#f1f1f1">{{x.Monday}}</td>
+				<td ng-if="$even">{{x.Monday}}</td>
+				<td ng-if="$odd" style="background-color:#f1f1f1">{{x.Tuesday}}</td>
+				<td ng-if="$even">{{x.Tuesday}}</td>
+				<td ng-if="$odd" style="background-color:#f1f1f1">{{x.Wednesday}}</td>
+				<td ng-if="$even">{{x.Wednesday}}</td>
+				<td ng-if="$odd" style="background-color:#f1f1f1">{{x.Thursday}}</td>
+				<td ng-if="$even">{{x.Thursday}}</td>
+				<td ng-if="$odd" style="background-color:#f1f1f1">{{x.Friday}}</td>
+				<td ng-if="$even">{{x.Friday}}</td>
+				<td ng-if="$odd" style="background-color:#f1f1f1">{{x.Saturday}}</td>
+				<td ng-if="$even">{{x.Saturday}}</td>
+				<td ng-if="$odd" style="background-color:#f1f1f1">{{x.Sunday}}</td>
+				<td ng-if="$even">{{x.Sunday}}</td>
+			</tr>
+		</table>
+		<button id="btn_save_timetable" ng-click="toggle()">修改课程表</button>	
+			
+	</div>	
+	<div class="" ng-hide="myshow">
+			
+		<table class="timetable timetable_save" cellspacing="0" >
+			<caption>课程表</caption>
+			<tr class="th" id="th">
+				<td style="background-color:#dedede;padding:0 .3rem;"></td>
+				<td style="background-color:#dedede">Mon</td>
+				<td style="background-color:#dedede">Tue</td>
+				<td style="background-color:#dedede">Wed</td>
+				<td style="background-color:#dedede">Thu</td>
+				<td style="background-color:#dedede">Fri</td>
+				<td style="background-color:#dedede">Sat</td>
+				<td style="background-color:#dedede">Sun</td>
+			</tr>
+			<tr ng-repeat="x in timetables">
+				<td class="th" style="background-color:#dedede;padding:0 .3rem;">{{$index + 1}}</td>
+				<td ng-click="select(opt)" ng-if="$odd" style="background-color:#f1f1f1">
+				<!-- {{x.Monday}}<br>	 -->
+				<select ng-init="x.Monday = {{x.Monday}}" ng-model="x.Monday" ng-options="x for x in options" ></select>
+				</td>
+				<td ng-click="select(opt)" ng-if="$even">
+
+				<!-- {{x.Monday}}	 -->
+				<select ng-init="x.Monday = {{x.Monday}}" ng-model="x.Monday" ng-options="x for x in options" ></select>
+				</td>
+				<td ng-click="select(opt)" ng-if="$odd" style="background-color:#f1f1f1">
+
+				<!-- {{x.Tuesday}}	 -->
+				<select ng-init="x.Tuesday = {{x.Tuesday}}" ng-model="x.Tuesday" ng-options="x for x in options" ></select>
+				</td>
+				<td ng-click="select(opt)" ng-if="$even">
+
+				<!-- {{x.Tuesday}}	 -->
+				<select ng-init="x.Tuesday = {{x.Tuesday}}" ng-model="x.Tuesday" ng-options="x for x in options" ></select>
+				</td>
+				<td ng-click="select(opt)" ng-if="$odd" style="background-color:#f1f1f1">
+
+				<!-- {{x.Wednesday}}	 -->
+				<select ng-init="x.Wednesday = {{x.Wednesday}}" ng-model="x.Wednesday" ng-options="x for x in options" ></select>
+				</td>
+				<td ng-click="select(opt)" ng-if="$even">
+
+				<!-- {{x.Wednesday}}	 -->
+				<select ng-init="x.Wednesday = {{x.Wednesday}}" ng-model="x.Wednesday" ng-options="x for x in options" ></select>
+				</td>
+				<td ng-click="select(opt)" ng-if="$odd" style="background-color:#f1f1f1">
+
+				<!-- {{x.Thursday}}	 -->
+				<select ng-init="x.Thursday = {{x.Thursday}}" ng-model="x.Thursday" ng-options="x for x in options" ></select>
+				</td>
+				<td ng-click="select(opt)" ng-if="$even">
+
+				<!-- {{x.Thursday}}	 -->
+				<select ng-init="x.Thursday = {{x.Thursday}}" ng-model="x.Thursday" ng-options="x for x in options" ></select>
+				</td>
+				<td ng-click="select(opt)" ng-if="$odd" style="background-color:#f1f1f1">
+
+				<!-- {{x.Friday}}	 -->
+				<select ng-init="x.Friday = {{x.Friday}}" ng-model="x.Friday" ng-options="x for x in options" ></select>
+				</td>
+				<td ng-click="select(opt)" ng-if="$even">
+
+				<!-- {{x.Friday}}	 -->
+				<select ng-init="x.Friday = {{x.Friday}}" ng-model="x.Friday" ng-options="x for x in options" ></select>
+				</td>
+				<td ng-click="select(opt)" ng-if="$odd" style="background-color:#f1f1f1">
+
+				<!-- {{x.Saturday}}	 -->
+				<select ng-init="x.Saturday = {{x.Saturday}}" ng-model="x.Saturday" ng-options="x for x in options" ></select>
+				</td>
+				<td ng-click="select(opt)" ng-if="$even">
+
+				<!-- {{x.Saturday}}	 -->
+				<select ng-init="x.Saturday = {{x.Saturday}}" ng-model="x.Saturday" ng-options="x for x in options" ></select>
+				</td>
+				<td ng-click="select(opt)" ng-if="$odd" style="background-color:#f1f1f1">
+
+				<!-- {{x.Sunday}}	 -->
+				<select ng-init="x.Sunday = {{x.Sunday}}" ng-model="x.Sunday" ng-options="x for x in options" ></select>
+				</td>
+				<td ng-click="select(opt)" ng-if="$even">
+
+				<!-- {{x.Sunday}}	 -->
+				<select ng-init="x.Sunday = {{x.Sunday}}" ng-model="x.Sunday" ng-options="x for x in options" ></select>
+				</td>
+			</tr>
+		</table>
+		<button id="btn_save_timetable"  ng-click="toggle()">保存课程表</button>
+	</div>
+</div>

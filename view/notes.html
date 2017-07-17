@@ -1,0 +1,13 @@
+<div ng-controller="notesCtrl">
+	<form action="" id="notes" ng-submit="notesAdd()">
+
+			<input class="title" type="text" ng-model="notesTitle" size="50" placeholder="title">
+   
+			<textarea ng-model="notesCon" name="" id="" cols="30" rows="10" placeholder="Notes"></textarea>
+		<input type="submit" value="submit" id="subform" />
+	</form>
+	<div ng-repeat="x in notesList" class="notes">
+	    <input type="checkbox" ng-model="x.done"> <span ng-bind="x.notesTitle"></span><p ng-bind="x.notesCon"></p>
+	</div>
+	<p class="notes"><button ng-click="remove()">删除记录</button></p>
+</div>
