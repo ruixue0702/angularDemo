@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>angular</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/flex.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+	<link rel="stylesheet" href="css/slides.css">
+	<link rel="stylesheet" href="css/timetable.css">
+	<link rel="stylesheet" href="css/calculator.css">
+	<link rel="stylesheet" href="css/news.css">
+	<link rel="stylesheet" href="css/notes.css">
+	<link rel="stylesheet" href="css/form.css">
+</head>
+
+    <body ng-app='myApp'>
+
+	<div class="swiper-container" id="swiper1">
+	    <div class="swiper-wrapper" >
+	        <div class="swiper-slide"><img src="images/slide/slide1.jpg" alt="img1"></div>
+	        <div class="swiper-slide"><img src="images/slide/slide2.jpg" alt="img2"></div>
+	        <div class="swiper-slide"><img src="images/slide/slide3.jpg" alt="img3"></div>
+	    </div>
+	    
+	</div>
+        <ul id="nav" class="flex-container">
+            <li class="flex-item"><a href="#/timetable">
+            	<img src="images/icon/icon1.jpg" alt="">
+            	<p>课程表</p>
+            </a></li>
+            <li class="flex-item"><a href="#/calculator">
+            	<img src="images/icon/icon2.jpg" alt="">
+            	<p>计算器</p>
+            </a></li>
+            <li class="flex-item"><a href="#/newslist">
+            	<img src="images/icon/icon3.jpg" alt="">
+            	<p>新闻列表</p>
+            </a></li>
+            <li class="flex-item"><a href="#/notes">
+            	<img src="images/icon/icon4.jpg" alt="">
+            	<p>每日一记</p>
+            </a></li>
+            <li class="flex-item"><a href="#/form">
+            	<img src="images/icon/icon5.jpg" alt="">
+            	<p>表单</p>
+            </a></li>
+        </ul>
+         
+        <div ng-view></div>
+        <script src="js/swiper-3.4.2.min.js"></script>
+        <script src="js/slides.js"></script>
+        <script src="js/angular.min.js"></script>  
+        <script src="js/angular-route.js"></script>  <!-- 实现路由 -->
+		
+		<script>
+			var myApp = angular.module('myApp',['ngRoute']) ;  //
+		</script>
+
+        <script src="js/config.js"></script> 
+        <script src="controller/timetableCtrl.js"></script><!-- 课程表 -->
+		<script src="json/timetable.json"></script>
+        <script src="controller/calculatorCtrl.js"></script><!-- 计算器 -->
+        <script src="controller/newslistCtrl.js"></script><!-- 新闻列表 -->
+        <script src="controller/notesCtrl.js"></script><!-- 每日一记 -->
+        <script src="controller/formCtrl.js"></script><!-- 表单 -->
+
+    </body>
+</html>
